@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Codificador cifra de Vigenère </title>
+</head>
+
+<body>
+    <main class="main-content">
+        <header class="header-banner">
+            <h1 class="main-title">Cifra de Vigenère</h1>
+            <img src="" alt="">
+        </header>
+        
+        <section class="input-section">
+            <h2 class="section-title">Digite o seu texto</h2>
+            <div class="input-wrapper">
+                <input type="text" id="texto" class="input-texto" placeholder="Digite o texto a ser criptografado">
+                <input type="text" id="chave" class="input-texto" placeholder="Digite a chave de Segurança">
+                <input type="text" id="criptografado" class="criptografado" placeholder="Texto Criptografado">
+                <button class="button-add" onclick="criptografar()">Criptografar</button>
+            </div>           
+        </section>
+    </main>
+    <script src="vigenere.js" defer></script>
+    <script src="app.js" defer></script>
+    <footer>&copy Elisângela de Souza</footer>
+</body>
+</html>
+

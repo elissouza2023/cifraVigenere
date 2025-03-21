@@ -1,0 +1,56 @@
+/* Estiliza o fundo da página com gradiente preto e verde */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom, #000000, #03C988);
+    color: white; /* Mantém o texto legível */
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+/* Estiliza o container principal */
+.main-content {
+    border: 1px solid #03C988; /* Borda fina na cor verde */
+    padding: 20px;
+    margin: 50px auto; /* Centraliza o conteúdo na tela */
+    width: 80%;
+    max-width: 600px;
+    background: url('codigo.jpg') no-repeat center center;
+    background-size: cover;
+    box-shadow: 0px 0px 10px rgba(3, 201, 136, 0.7); /* Efeito de brilho suave */
+    border-radius: 10px; /* Bordas arredondadas */
+    text-align: center;
+}
+
+/* Estiliza os inputs e o botão */
+.input-texto, .criptografado, #chave, .button-add {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #03C988;
+    border-radius: 5px;
+    background: rgba(0, 0, 0, 0.7); /* Fundo escuro translúcido */
+    color: white;
+}
+
+/* Estiliza o botão */
+.button-add {
+    background-color: #03C988;
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.button-add:hover {
+    background-color: #028C6A; /* Um tom mais escuro ao passar o mouse */
+}
+footer {    
+    font-family: Arial, sans-serif;
+    background: white;
+    color: #028C6A;
+    text-align: center;
+    padding: 10px;
+}
