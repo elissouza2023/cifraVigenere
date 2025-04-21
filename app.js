@@ -37,3 +37,43 @@ function criptografar() {
 
     textCriptografado.value = resultado; // Exibe o texto criptografado
 }
+// Função para descriptografar usando a Cifra de Vigenère
+function descriptografar() {
+    let textoCriptografado = textCriptografado.value.toUpperCase(); // Pega o texto criptografado
+    let chave = chaveInput.value.toUpperCase(); // Chave também em maiúsculo
+    let chaveRepetida = "";
+    let resultado = "";
+    let alfabeto = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+
+    if (chave === "") {
+        alert("Por favor, insira uma chave para descriptografar o texto.");
+        return;
+    }
+
+    // Repetindo a chave até o tamanho do texto criptografado
+    for (let i = 0; i < textoCriptografado.length; i++) {
+        chaveRepetida += chave[i % chave.length];
+    }
+
+    // Processo de descriptografia
+    for (let i = 0; i < textoCriptografado.length; i++) {
+        let letraCripto = textoCriptografado[i];
+        let letraChave = chaveRepetida[i];
+
+        if (alfabeto.includes(letraCripto)) {
+            let linha = alfabeto.indexOf(letraChave);
+            let coluna = tabelaVigenere[linha].indexOf(letraCripto);
+            resultado += alfabeto[coluna]; // Retorna à letra original
+        } else {
+            resultado += letraCripto; // Mantém caracteres não alfabéticos
+        }
+    }
+
+    document.getElementById("descriptografado").value = resultado; // Exibe o texto descriptografado
+}
+function apagar() {
+    texto.value = ""; // Limpa o campo de texto
+    textCriptografado.value = ""; // Limpa o campo de texto criptografado
+    document.getElementById("descriptografado").value = ""; // Limpa o campo de texto descriptografado
+    chaveInput.value = ""; // Limpa o campo da chave
+}
